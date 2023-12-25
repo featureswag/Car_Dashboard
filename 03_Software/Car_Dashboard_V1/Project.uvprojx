@@ -721,14 +721,24 @@
               <FilePath>.\Hardware\lcd1602.h</FilePath>
             </File>
             <File>
-              <FileName>keypad4x4.c</FileName>
+              <FileName>keypad.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardware\keypad4x4.c</FilePath>
+              <FilePath>.\Hardware\keypad.c</FilePath>
             </File>
             <File>
-              <FileName>keypad4x4.h</FileName>
+              <FileName>keypad.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Hardware\keypad4x4.h</FilePath>
+              <FilePath>.\Hardware\keypad.h</FilePath>
+            </File>
+            <File>
+              <FileName>peripheralInit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\peripheralInit.c</FilePath>
+            </File>
+            <File>
+              <FileName>peripheralInit.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\peripheralInit.h</FilePath>
             </File>
           </Files>
         </Group>

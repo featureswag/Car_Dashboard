@@ -32,3 +32,5 @@
 .\objects\main.o: .\Hardware\oled.h
 .\objects\main.o: .\Hardware\ad.h
 .\objects\main.o: .\Hardware\lcd1602.h
+.\objects\main.o: .\Hardware\keypad.h
+.\objects\main.o: .\Hardware\peripheralInit.h

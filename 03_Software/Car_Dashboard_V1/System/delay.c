@@ -39,3 +39,16 @@ void delay_s(uint32_t xs)
 		delay_ms(1000);
 	}
 } 
+
+/**
+  * @brief  纳秒级延时
+  * @param  nms 延时时长，范围：0~4294967295
+  * @retval 无
+  */
+ void delay_ns(uint32_t nms)
+{
+  do
+  {
+    ;
+  } while (--nms);
+}

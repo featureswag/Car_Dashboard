@@ -1,5 +1,4 @@
 .\objects\lcd1602.o: Hardware\lcd1602.c
-.\objects\lcd1602.o: Hardware\lcd1602.h
 .\objects\lcd1602.o: .\Startup\stm32f10x.h
 .\objects\lcd1602.o: .\Startup\core_cm3.h
 .\objects\lcd1602.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,3 +29,4 @@
 .\objects\lcd1602.o: .\Library\inc\stm32f10x_wwdg.h
 .\objects\lcd1602.o: .\Library\inc\misc.h
 .\objects\lcd1602.o: .\System\delay.h
+.\objects\lcd1602.o: Hardware\lcd1602.h

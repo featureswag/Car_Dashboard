@@ -31,6 +31,8 @@
 ".\objects\oled.o"
 ".\objects\ad.o"
 ".\objects\lcd1602.o"
+".\objects\keypad.o"
+".\objects\peripheralinit.o"
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 --strict --scatter ".\Objects\Project.sct"
