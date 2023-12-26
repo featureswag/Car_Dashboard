@@ -3,5 +3,4 @@
 
 extern void PeripheralInit(void);
 extern void GPIO_LED_Configuration(void);
-
 #endif // __PERIPHERALINIT_H__

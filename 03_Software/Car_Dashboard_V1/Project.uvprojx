@@ -333,10 +333,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>--locale=english</MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Startup;.\Library;.\Library\inc;.\Library\src;.\System;.\User;.\Hardware</IncludePath>
+              <IncludePath>.\Startup;.\Library;.\Library\inc;.\Library\src;.\System;.\User;.\Hardware;.\Hardware\Fonts</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -739,6 +739,21 @@
               <FileName>peripheralInit.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\peripheralInit.h</FilePath>
+            </File>
+            <File>
+              <FileName>lcd_tft.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\lcd_tft.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd_tft.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\lcd_tft.h</FilePath>
+            </File>
+            <File>
+              <FileName>fonts.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Fonts\fonts.h</FilePath>
             </File>
           </Files>
         </Group>
