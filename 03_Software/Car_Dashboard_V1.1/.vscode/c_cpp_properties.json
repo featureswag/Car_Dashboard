@@ -3,14 +3,14 @@
         {
             "name": "Target 1",
             "includePath": [
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\Startup",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\Library",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\Library\\inc",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\Library\\src",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\System",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\User",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\Hardware",
-                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1\\Hardware\\Fonts",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\Startup",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\Library",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\Library\\inc",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\Library\\src",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\System",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\User",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\Hardware",
+                "f:\\800 - Github\\Car_Dashboard\\03_Software\\Car_Dashboard_V1.1\\Hardware\\Fonts",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw"
             ],

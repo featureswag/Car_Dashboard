@@ -46,34 +46,33 @@
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
    
+
+#define MSK_WIDTH_MAX         32      // æ”¯æŒæœ€å¤§å­—æ¨¡å®½åº¦ 32
+#define MSK_HEIGHHT_MAX       32      // æ”¯æŒæœ€å¤§å­—æ¨¡é«˜åº¦ 32
    
-  
-#define MSK_WIDTH_MAX         32      // Ö§³Ö×î´ó×ÖÄ£¿í¶È 32
-#define MSK_HEIGHHT_MAX       32      // Ö§³Ö×î´ó×ÖÄ£¸ß¶È 32
-   
-// ------------------  ºº×Ö×ÖÄ£µÄÊı¾İ½á¹¹¶¨Òå ------------------------ //
-struct  typFNT_GBxx                        // ºº×Ö×ÖÄ£Êı¾İ½á¹¹ 
+// ------------------  æ±‰å­—å­—æ¨¡çš„æ•°æ®ç»“æ„å®šä¹‰ ------------------------ //
+struct  typFNT_GBxx                        // æ±‰å­—å­—æ¨¡æ•°æ®ç»“æ„ 
 {
-    uint8_t  Index[2];               // ºº×ÖÄÚÂëË÷Òı  
-    uint8_t  Msk[MSK_HEIGHHT_MAX*MSK_WIDTH_MAX>>3];   // µãÕóÂëÊı¾İ 
+    uint8_t  Index[3];               // æ±‰å­—å†…ç ç´¢å¼•  
+    uint8_t  Msk[MSK_HEIGHHT_MAX*MSK_WIDTH_MAX>>3];   // ç‚¹é˜µç æ•°æ® 
 };
 
 
 
-typedef struct _tFont                       // ×Ö·û×ÖÄ£½á¹¹Ìå
+typedef struct _tFont                       // å­—ç¬¦å­—æ¨¡ç»“æ„ä½“
 {    
-  const uint8_t *table;                     // ×Ö·û×ÖÄ£
-  uint16_t Width;                           // ×Ö·û×ÖÄ£¿í¶È
-  uint16_t Height;                          // ×Ö·û×ÖÄ£¸ß¶È
+  const uint8_t *table;                     // å­—ç¬¦å­—æ¨¡
+  uint16_t Width;                           // å­—ç¬¦å­—æ¨¡å®½åº¦
+  uint16_t Height;                          // å­—ç¬¦å­—æ¨¡é«˜åº¦
 } sFONT;
 
 
-typedef struct _tFont_cn                    // ÖĞÎÄ×ÖÄ£½á¹¹Ìå
+typedef struct _tFont_cn                    // ä¸­æ–‡å­—æ¨¡ç»“æ„ä½“
 {    
-  const struct  typFNT_GBxx *table;         // ÖĞÎÄ×ÖÄ£
-  uint16_t Width;                           // ÖĞÎÄ×ÖÄ£¿í¶È
-  uint16_t Height;                          // ÖĞÎÄ×ÖÄ£¸ß¶È
-  uint16_t Length;                          // ÖĞÎÄ×ÖÄ£³¤¶È (ºº×Ö¸öÊı)
+  const struct  typFNT_GBxx *table;         // ä¸­æ–‡å­—æ¨¡
+  uint16_t Width;                           // ä¸­æ–‡å­—æ¨¡å®½åº¦
+  uint16_t Height;                          // ä¸­æ–‡å­—æ¨¡é«˜åº¦
+  uint16_t Length;                          // ä¸­æ–‡å­—æ¨¡é•¿åº¦ (æ±‰å­—ä¸ªæ•°)
 } sFONT_CN;
 
 

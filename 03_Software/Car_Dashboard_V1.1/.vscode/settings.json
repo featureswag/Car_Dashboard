@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stm32f10x.h": "c",
-        "keypad.h": "c"
+        "keypad.h": "c",
+        "hall_encoder.h": "c"
     }
 }
