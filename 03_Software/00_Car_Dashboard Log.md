@@ -1,0 +1,7 @@
+# Car_Dashboard Log
+
+- Car_Dashboard Version 1
+  - baseline（基准框架）
+- Car_Dashboard Version 1.1
+  - update Hall Sensor module（更新了霍尔传感器模块代码）
+- Car_Dashboard Version 1.2
