@@ -8,4 +8,7 @@ Car_Dashboard Log
   - update new feature display current speed （新增显示当前车速）
   - update new feature display travelled mile （新增显示已行驶里程数）
 - Car_Dashboard Version 1.3
+  - current speed been stable （稳定当前车速）
+  - travelled mile been stable（稳定了已行驶里程数）
+  - combine ad module （合并了油浮子AD模块）
 
