@@ -11,4 +11,7 @@ Car_Dashboard Log
   - current speed been stable （稳定当前车速）
   - travelled mile been stable（稳定了已行驶里程数）
   - combine ad module （合并了油浮子AD模块）
+- Car_Dashboard Version 1.4
+  - update new feature language switch（新增功能中英文切换）
+- Car_Dashboard Version 1.5
 
