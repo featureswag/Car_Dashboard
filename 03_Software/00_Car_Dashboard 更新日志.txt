@@ -5,4 +5,7 @@ Car_Dashboard Log
 - Car_Dashboard Version 1.1
   - update Hall Sensor module（更新了霍尔传感器模块代码）
 - Car_Dashboard Version 1.2
+  - update new feature display current speed （新增显示当前车速）
+  - update new feature display travelled mile （新增显示已行驶里程数）
+- Car_Dashboard Version 1.3
 
