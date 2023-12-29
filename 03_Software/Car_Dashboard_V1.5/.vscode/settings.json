@@ -2,6 +2,8 @@
     "files.associations": {
         "stm32f10x.h": "c",
         "keypad.h": "c",
-        "hall_encoder.h": "c"
+        "hall_encoder.h": "c",
+        "hall_sensor.h": "c",
+        "lcd_tft.h": "c"
     }
 }

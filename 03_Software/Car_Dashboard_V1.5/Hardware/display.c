@@ -7,60 +7,14 @@
 #include "peripheralInit.h"
 #include "lcd_tft.h"
 #include "hall_sensor.h"
+#include "display.h"
+#include "fonts.h"
 
-uint16_t current_speed = 0;
-uint16_t travelled_distance = 0;
-uint16_t oil_level = 0;
-uint16_t flag = 1000;
-uint16_t keyval = 0;
-uint16_t current_status = 1;
+volatile uint16_t current_speed = 0;
+volatile uint16_t travelled_distance = 0;
+volatile uint16_t oil_level = 0;
 
-//English Version display
-void display_English_BasicInfo(void);
-//Chinese Version display
-void display_Chinese_BasicInfo(void);
 
-//Module Info display
-void display_SpeedInfo(void);
-void display_OilInfo(void);
-
-//Update program function
-void update_SpeedInfo(void);
-void update_OilInfo(void);
-
-int main(void)
-{
-	PeripheralInit();
-	LCD_Clear(LCD_COLOR_BLACK);
-
-	// info display and update
-	display_English_BasicInfo();
-	update_SpeedInfo();
-	update_OilInfo();
-
-	while(1)
-	{
-		keyval = KeyTransfer();
-		switch (keyval)
-		{
-		case 1:
-			display_English_BasicInfo();
-			current_status = 1;
-			break;
-		case 2:
-			display_Chinese_BasicInfo();
-			current_status = 2;
-			break;
-		default:
-			break;
-		}
-		display_SpeedInfo();
-		update_SpeedInfo();
-		display_OilInfo();
-		update_OilInfo();
-		flag ++;
-	}
-}
 
 void display_English_BasicInfo(void)
 {
@@ -86,7 +40,7 @@ void display_Chinese_BasicInfo(void)
 	LCD_WriteString(10,70,LCD_COLOR_YELLOW,LCD_COLOR_BLACK,(uint8_t *)"剩余油量:");
 	LCD_DisplayChar(280,70,'%');
 }
-void display_SpeedInfo(void)
+void display_SpeedInfo(uint16_t current_status)
 {
 	LCD_WriteNumInt (200,30,LCD_COLOR_YELLOW, LCD_COLOR_BLACK,(uint16_t) current_speed);
 	LCD_WriteNumInt (200,50,LCD_COLOR_YELLOW, LCD_COLOR_BLACK,(uint16_t) travelled_distance/120);
@@ -98,11 +52,11 @@ void display_SpeedInfo(void)
 	else if(current_status == 2)
 	{
 		if(current_speed>15) LCD_WriteString(160,170,LCD_COLOR_YELLOW,LCD_COLOR_RED,(uint8_t *)"速度警告!");
-		else LCD_WriteString(160,170,LCD_COLOR_YELLOW,LCD_COLOR_BLACK,(uint8_t *)"             ");
+		else LCD_WriteString(160,170,LCD_COLOR_YELLOW,LCD_COLOR_BLACK,(uint8_t *)"           ");
 	}
 }
 
-void display_OilInfo(void)
+void display_OilInfo(uint16_t current_status)
 {
 	LCD_WriteNumInt(200,70,LCD_COLOR_YELLOW,LCD_COLOR_BLACK,oil_level); 
 	if(current_status == 1)
@@ -113,8 +67,9 @@ void display_OilInfo(void)
 	else if(current_status == 2)
 	{
 		if(oil_level<10) LCD_WriteString(10,170,LCD_COLOR_YELLOW,LCD_COLOR_RED,(uint8_t *)"油量警告!");
-		
+		else LCD_WriteString(10,170,LCD_COLOR_YELLOW,LCD_COLOR_BLACK,(uint8_t *)"          ");
 	}
+	
 }
 
 void update_SpeedInfo(void)
@@ -123,22 +78,14 @@ void update_SpeedInfo(void)
 	travelled_distance = getTravelledDistance();
 }
 
-void update_OilInfo(void)
+void update_OilInfo(uint16_t flag)
 {
 	if(flag >= 800)
 	{
 		uint16_t temp = getOilLevel();
 		oil_level = temp/36;
-		if(oil_level < 7)
-		{
-			oil_level = 0;
-		}
-		else if(oil_level >100)
-		{
-			oil_level = 100;
-		}
-		flag = 0;
-		temp = 0;
+		if(oil_level < 13) oil_level = 0;
+		else if(oil_level >100) oil_level = 100;
+		flag = temp = 0;
 	}
 }
-
